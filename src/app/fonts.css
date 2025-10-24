@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Stormfaze';
+    src: url('../../public/font/Stormfaze.otf') format('opentype');
+}
+
+body {
+    font-family: Poppins;
+}
+
+.title {
+    font-family: Stormfaze;
+}
