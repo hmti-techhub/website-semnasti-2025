@@ -58,7 +58,7 @@ export default function HeroSection() {
 
         <div className="flex flex-row flex-wrap justify-center gap-2.5 md:gap-3.5 mt-4 md:mt-5">
           <Link
-            href="/#tiket"
+            href="/registration"
             className="px-4 md:px-5 py-1.5 md:py-2 bg-gradient-to-r from-[#17D3FD] to-[#CD3DFF] hover:opacity-90 rounded-full font-bold transition-all transform hover:scale-[1.02] shadow-lg shadow-[#17D3FD]/30 text-sm md:text-base"
           >
             DAFTAR SEKARANG

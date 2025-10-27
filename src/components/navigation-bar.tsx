@@ -46,9 +46,9 @@ const NavigationBar = () => {
         </nav>
 
         <div className="flex items-center gap-3">
-          <button className="bg-gradient-to-r from-[#17D3FD] to-[#CD3DFF] hover:opacity-90 px-5 md:px-6 py-2 rounded-full font-bold text-sm transition-all transform hover:scale-105">
+          <Link href="/registration" className="bg-gradient-to-r from-[#17D3FD] to-[#CD3DFF] hover:opacity-90 px-5 md:px-6 py-2 rounded-full font-bold text-sm transition-all transform hover:scale-105">
             DAFTAR
-          </button>
+          </Link>
           {/* Mobile toggle */}
           <button
             className="lg:hidden p-2 rounded-md border border-white/10 hover:border-white/30"

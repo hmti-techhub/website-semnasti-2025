@@ -6,8 +6,8 @@ import { IoIosArrowDown } from 'react-icons/io';
 
 const faqs = [
   { question: 'Apa itu Semnasti?', answer: 'Semnasti adalah Seminar Nasional Teknik Informatika yang diselenggarakan oleh HMTI UDINUS.' },
-  { question: 'Kapan acara dilaksanakan?', answer: 'Acara akan dilaksanakan pada Sabtu, 8 November 2025.' },
-  { question: 'Dimana lokasi acara?', answer: 'Acara akan dilaksanakan di E.3 TVKU UDINUS, Universitas Dian Nuswantoro.' },
+  { question: 'Kapan acara dilaksanakan?', answer: 'Acara akan dilaksanakan pada Sabtu, 28 - 29 November 2025.' },
+  { question: 'Dimana lokasi acara?', answer: 'Acara akan dilaksanakan di H1 GALLERY & E.3 TVKU UDINUS, Universitas Dian Nuswantoro.' },
   { question: 'Bagaimana cara mendaftar?', answer: 'Anda dapat mendaftar melalui tombol "Daftar Sekarang" di bagian atas halaman.' },
 ];
 

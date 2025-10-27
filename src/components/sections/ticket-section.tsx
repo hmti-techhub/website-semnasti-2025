@@ -1,4 +1,5 @@
 "use client";
+import Link from 'next/link';
 
 const tickets = [
   {
@@ -76,9 +77,9 @@ export default function TicketSection() {
               </p>
               {/* Benefits moved to a separate section */}
               {ticket.active && (
-                <button className="w-full py-2.5 md:py-3 bg-gradient-to-r from-[#17D3FD] to-[#CD3DFF] rounded-full font-bold hover:opacity-90 transition-all shadow-lg text-sm md:text-base">
+                <Link href="/registration" className="w-full inline-flex items-center justify-center py-2.5 md:py-3 bg-gradient-to-r from-[#17D3FD] to-[#CD3DFF] rounded-full font-bold hover:opacity-90 transition-all shadow-lg text-sm md:text-base">
                   Pesan Tiket
-                </button>
+                </Link>
               )}
             </div>
           ))}
@@ -86,14 +87,14 @@ export default function TicketSection() {
 
         {activeTickets.length > 0 && (
           <div className="text-center">
-            <div className="inline-block bg-gradient-to-r from-[#CD3DFF] to-[#17D3FD] rounded-2xl md:rounded-3xl p-[2px]">
+            <Link href="/registration" className="inline-block bg-gradient-to-r from-[#CD3DFF] to-[#17D3FD] rounded-2xl md:rounded-3xl p-[2px]">
               <div className="bg-[#1a0b2e] rounded-2xl md:rounded-3xl px-8 md:px-12 py-4 md:py-6 hover:bg-transparent transition-all duration-300 cursor-pointer group">
                 <p className="font-bold text-base md:text-lg mb-2">Sedang Berlangsung</p>
                 <p className="text-xl md:text-2xl lg:text-3xl font-stormfaze text-gradient-gray group-hover:text-white transition-all">
                   {`Pendaftaran Tiket ${activeTitleText}`}
                 </p>
               </div>
-            </div>
+            </Link>
           </div>
         )}
       </div>
