@@ -1,12 +1,22 @@
 @font-face {
     font-family: 'Stormfaze';
-    src: url('../../public/font/Stormfaze.otf') format('opentype');
+    src: url('/font/Stormfaze.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
 body {
-    font-family: Poppins;
+    font-family: 'Inter', 'Poppins', sans-serif;
 }
 
-.title {
-    font-family: Stormfaze;
+.title-stormfaze {
+    font-family: 'Stormfaze', sans-serif;
+}
+
+.gradient-gray {
+    background: linear-gradient(180deg, #E6E6E6 0%, #959595 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }

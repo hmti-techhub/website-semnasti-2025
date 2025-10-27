@@ -1,8 +1,69 @@
 @import "tailwindcss";
+@import "./fonts.css";
 
 @layer base {
   body {
-    @apply bg-gradient-to-br from-indigo-950 via-blue-900 to-purple-900 text-white;
+    color: #ffffff;
     font-family: 'Inter', sans-serif;
+    /* Global gradient background for all pages/components */
+    background: linear-gradient(180deg, #0a0e27 0%, #1a0b2e 50%, #0a0e27 100%);
+    background-attachment: fixed;
+    min-height: 100vh;
+    /* Smooth scrolling */
+    scroll-behavior: smooth;
+  }
+  
+  /* Optimize parallax performance */
+  * {
+    will-change: auto;
+  }
+}
+
+@layer utilities {
+  .gradient-border {
+    position: relative;
+    background: linear-gradient(135deg, #17D3FD 0%, #CD3DFF 100%);
+    padding: 2px;
+    border-radius: 1rem;
+  }
+  
+  .gradient-border::before {
+    content: '';
+    position: absolute;
+    inset: 2px;
+    background: #1a0b2e;
+    border-radius: calc(1rem - 2px);
+    z-index: -1;
+  }
+
+  .circuit-pattern {
+    /* Pattern dihapus - menggunakan BackgroundDecorative dengan parallax */
+    background: transparent;
+  }
+
+  .glow-cyan {
+    box-shadow: 0 0 20px rgba(23, 211, 253, 0.3);
+  }
+
+  .glow-purple {
+    box-shadow: 0 0 20px rgba(205, 61, 255, 0.3);
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, #17D3FD 0%, #CD3DFF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-gray {
+    background: linear-gradient(180deg, #E6E6E6 0%, #959595 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .font-stormfaze {
+    font-family: 'Stormfaze', sans-serif;
   }
 }

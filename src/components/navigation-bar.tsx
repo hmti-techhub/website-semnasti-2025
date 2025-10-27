@@ -1,31 +1,97 @@
-import Link from 'next/link'
-import React from 'react'
+"use client";
+
+import Link from "next/link";
+import Image from "next/image";
+import React, { useState } from "react";
+import brainLogo from "@/assets/brain.png";
 
 const NavigationBar = () => {
-    return (
-        <header className="relative z-10 flex justify-between items-center px-6 py-4 bg-black/20 backdrop-blur-md">
-            <div className="flex items-center space-x-2">
-                <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center">
-                    <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
-                    </svg>
-                </div>
-                <span className="text-sm font-medium">Web Semnasti2025</span>
+  const [open, setOpen] = useState(false);
+
+  const items = [
+    { label: "Beranda", href: "#beranda" },
+    { label: "Tentang", href: "#tentang" },
+    { label: "Tiket", href: "#tiket" },
+    { label: "Informasi", href: "#informasi" },
+  ];
+
+  return (
+    <header className="fixed top-0 left-0 right-0 z-50 bg-[#0a0e27]/80 backdrop-blur-md border-b border-white/10">
+      <div className="max-w-7xl mx-auto px-4 md:px-8 py-3 flex items-center justify-between">
+        <Link href="/" className="flex items-center gap-3">
+            <div className="relative w-10 h-10 md:w-12 md:h-12">
+                <Image
+                    src={brainLogo}
+                    alt="Semnasti Logo"
+                    fill
+                    className="object-contain"
+                />
             </div>
+            <span className="text-sm md:text-base font-bold hidden sm:block font-stormfaze text-gradient-gray">
+                SEMNASTI 2025
+            </span>
+        </Link>
 
-            <nav className="hidden md:flex space-x-6 text-sm font-medium">
-                {['Beranda', 'Tantang', 'Teaser', 'Pembicara', 'Tiket', 'Informasi'].map((item) => (
-                    <Link key={item} href="#" className="hover:text-blue-300 transition-colors">
-                        {item}
-                    </Link>
-                ))}
-            </nav>
+        {/* Desktop nav */}
+        <nav className="hidden lg:flex items-center gap-4 md:gap-6 text-sm font-semibold">
+          {items.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className="hover:text-[#17D3FD] transition-colors"
+            >
+              {item.label}
+            </Link>
+          ))}
+        </nav>
 
-            <button className="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg font-medium transition-all transform hover:scale-105">
-                DAFTAR
-            </button>
-        </header>
-    )
-}
+        <div className="flex items-center gap-3">
+          <button className="bg-gradient-to-r from-[#17D3FD] to-[#CD3DFF] hover:opacity-90 px-5 md:px-6 py-2 rounded-full font-bold text-sm transition-all transform hover:scale-105">
+            DAFTAR
+          </button>
+          {/* Mobile toggle */}
+          <button
+            className="lg:hidden p-2 rounded-md border border-white/10 hover:border-white/30"
+            aria-label="Toggle menu"
+            onClick={() => setOpen((v) => !v)}
+          >
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M4 7h16M4 12h16M4 17h16"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
 
-export default NavigationBar
+      {/* Mobile menu */}
+      {open && (
+        <div className="lg:hidden border-t border-white/10 bg-[#0a0e27]/95 backdrop-blur-md">
+          <nav className="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-2 text-sm">
+            {items.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="py-2 px-2 rounded-md hover:bg-white/5 font-semibold"
+                onClick={() => setOpen(false)}
+              >
+                {item.label}
+              </Link>
+            ))}
+          </nav>
+        </div>
+      )}
+    </header>
+  );
+};
+
+export default NavigationBar;

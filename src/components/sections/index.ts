@@ -1,0 +1,9 @@
+export { default as HeroSection } from './hero-section';
+export { default as GallerySection } from './gallery-section';
+export { default as AboutSection } from './about-section';
+export { default as TeaserSection } from './teaser-section';
+export { default as SpeakerSection } from './speaker-section';
+export { default as TicketSection } from './ticket-section';
+export { default as BenefitsSection } from './benefits-section';
+export { default as InformationSection } from './information-section';
+export { default as FooterSection } from './footer-section';
