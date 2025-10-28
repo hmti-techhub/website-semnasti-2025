@@ -35,9 +35,10 @@ export default function FooterSection() {
           <div>
             <h4 className="font-bold mb-4 text-lg">Contact</h4>
             <p className="text-sm text-white/70 leading-relaxed">
-              Email: semnasti.hmti.udinus.com<br />
-              Instagram: @semnasti<br />
-              Contact: +62 812-3456-7890
+              Email: semnasti.hmti.udinus.com <br />
+              Instagram: @semnasti <br />
+              Contact 1: 082324075079 (Deris) <br />
+              Contact 2: 081228862996 (Bayu)
             </p>
           </div>
         </div>
