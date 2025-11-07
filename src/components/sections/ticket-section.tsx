@@ -22,7 +22,7 @@ const tickets = [
   },
   {
     title: "Normal Price",
-    price: "Rp 100.000",
+    price: "Rp 60.000",
     desc: "Harga reguler pada periode akhir penjualan.",
     active: false,
   },

@@ -11,8 +11,8 @@ const CountdownTimer = () => {
   });
 
   useEffect(() => {
-    // Target: November 8, 2025 at 00:00:00 (UTC)
-    const targetDate = new Date('2025-11-29T00:00:00Z').getTime();
+    // Target: December 6, 2025 at 00:00:00 (UTC)
+    const targetDate = new Date('2025-12-06T00:00:00Z').getTime();
 
     const updateTimer = () => {
       const now = new Date().getTime();
