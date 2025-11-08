@@ -13,17 +13,15 @@ export default function AboutSection() {
 
         <div className="bg-white/5 backdrop-blur-md rounded-2xl md:rounded-3xl p-6 md:p-8 lg:p-10 border border-white/10 shadow-2xl">
           <p className="text-sm md:text-base leading-relaxed text-white/90">
-            Perkembangan teknologi digital membawa berbagai manfaat bagi
-            masyarakat. Namun, banyak pihak di Indonesia belum memiliki
-            pemahaman yang mendalam dan keterampilan teknis untuk merancang,
-            mengembangkan, dan mengimplementasikan sistem keamanan siber yang
-            efektif. Keterbatasan sumber daya manusia yang ahli di bidang ini
-            menjadi hambatan utama dalam memaksimalkan pertahanan negara
-            terhadap serangan siber yang semakin meningkat. Melalui topik ini,
-            peserta diharapkan memperoleh pengetahuan tentang tantangan keamanan
-            siber yang dihadapi Indonesia serta strategi dan teknologi yang
-            dapat diterapkan untuk memperkuat pertahanan digital di
-            berbagai sektor industri.
+            Seminar Nasional Teknik Informatika (SEMNASTI) adalah acara tahunan
+            yang diselenggarakan oleh Himpunan Mahasiswa Teknik Informatika
+            (HMTI) Universitas Dian Nuswantoro (UDINUS) Semarang. Kegiatan ini
+            bertujuan memberikan wawasan terbaru tentang perkembangan teknologi,
+            khususnya Artificial Intelligence (AI), serta menjadi ajang
+            bertemunya mahasiswa, akademisi, dan praktisi industri. Tahun ini,
+            SEMNASTI mengangkat tema “Smart Living with AI: Real Tech for Real
+            Life”, yang menyoroti penerapan nyata AI dalam kehidupan
+            sehari-hari.
           </p>
         </div>
       </div>
