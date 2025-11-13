@@ -24,7 +24,7 @@ export default function Home() {
       <TicketSection />
       <BenefitsSection />
       <InformationSection />
-  <PartnersSponsorsStrip />
+      <PartnersSponsorsStrip />
       <FooterSection />
     </div>
   );

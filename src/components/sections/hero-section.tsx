@@ -8,6 +8,7 @@ import dinusLogo from "@/assets/LOGO-UDINUS 1.png";
 import hmtiLogo from "@/assets/Rectangle.png";
 import Link from "next/link";
 import group2469 from "@/assets/Group 2469.png";
+import logoAorus from "@/assets/logo-aorus.png";
 
 const logoStock = [asiaLogo, akreditasiLogo, dinusLogo, hmtiLogo];
 
@@ -60,9 +61,29 @@ export default function HeroSection() {
               priority
             />
           </div>
-          <h1 className="relative z-10 px-2 md:px-4 text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold font-stormfaze leading-tight tracking-wide text-gradient-brand">
-            SEMNASTI 2025
-          </h1>
+          {/* Vertical layout: title above, collaboration badge below */}
+          <div className="relative z-10 px-2 md:px-4 flex flex-col items-center justify-center gap-2">
+            <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold font-stormfaze leading-tight tracking-wide text-gradient-brand text-center">
+              SEMNASTI 2025
+            </h1>
+
+            {/* Collaboration badge: 'x' centered between title and enlarged logo */}
+            <div className="flex flex-col items-center">
+              <span className="text-white/80 font-medium uppercase text-lg md:text-xl">
+                x
+              </span>
+              <div className="h-12 sm:h-16 md:h-20 lg:h-24">
+                <Image
+                  src={logoAorus}
+                  alt="Brand collaboration logo"
+                  width={420}
+                  height={126}
+                  className="h-full w-auto object-contain"
+                  priority
+                />
+              </div>
+            </div>
+          </div>
         </div>
 
         <p className="text-sm md:text-base lg:text-lg text-white/90 font-light mb-1.5 md:mb-2.5">

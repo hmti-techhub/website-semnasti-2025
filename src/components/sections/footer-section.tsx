@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import brainLogo from '@/assets/brain.png';
+import logoAorus from '@/assets/logo-aorus.png';
 
 export default function FooterSection() {
   return (
@@ -9,11 +10,22 @@ export default function FooterSection() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>
-            <div className="flex items-center gap-3 mb-4">
+            <div className="flex items-center gap-3 mb-4 flex-wrap">
               <div className="relative w-12 h-12">
                 <Image src={brainLogo} alt="Semnasti" fill className="object-contain" />
               </div>
-              <span className="font-bold text-xl font-stormfaze text-gradient-brand">SEMNASTI 2025</span>
+              <span className="font-bold text-xl font-stormfaze text-gradient-brand leading-none">SEMNASTI</span>
+              <span className="text-white/80 font-medium uppercase text-sm leading-none">x</span>
+              <div className="flex items-center h-6 md:h-8">
+                <Image
+                  src={logoAorus}
+                  alt="AORUS Logo"
+                  width={200}
+                  height={64}
+                  className="h-full w-auto object-contain"
+                  priority
+                />
+              </div>
             </div>
             <p className="text-sm text-white/70 leading-relaxed">
               Smart Living With AI<br />
