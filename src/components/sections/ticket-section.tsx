@@ -6,25 +6,29 @@ const tickets = [
     title: "Early Bird",
     price: "Rp 40.000",
     desc: "Harga paling hemat, kuota sangat terbatas.",
-    active: true,
+    active: false,
+    soldOut: true,
   },
   {
     title: "Presale (Single)",
     price: "Rp 50.000",
     desc: "Pra-penjualan setelah Early Bird, stok terbatas.",
-    active: false,
+    active: true,
+    soldOut: false,
   },
   {
     title: "Presale (Bundling)",
     price: "Rp 145.000",
     desc: "Paket hemat untuk 3 tiket (bundling).",
-    active: false,
+    active: true,
+    soldOut: false,
   },
   {
     title: "Normal Price",
     price: "Rp 60.000",
     desc: "Harga reguler pada periode akhir penjualan.",
     active: false,
+    soldOut: false,
   },
 ];
 
@@ -60,6 +64,11 @@ export default function TicketSection() {
                   : "border-white/10 bg-white/5 hover:border-white/30"
               }`}
             >
+              {ticket.soldOut && (
+                <div className="absolute -top-2 -right-2 bg-gradient-to-r from-red-600 to-red-500 text-white text-xs md:text-sm font-bold px-4 py-2 rotate-12 shadow-lg shadow-red-500/50 border-2 border-red-400">
+                  SOLD OUT
+                </div>
+              )}
               <h3 className="text-base md:text-lg font-bold mb-3">
                 {ticket.title}
               </h3>
